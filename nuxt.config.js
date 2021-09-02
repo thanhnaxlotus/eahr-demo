@@ -45,7 +45,7 @@ export default {
     baseURL: 'http://172.18.0.2:3001', // Used as fallback if no runtime config is provided
     credentials: false,
     init(axios) {
-      axios.defaults.withCredentials = true
+      axios.defaults.withCredentials = false
     }
   },
 
