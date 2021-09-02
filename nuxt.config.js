@@ -51,4 +51,8 @@ export default {
   serverMiddleware: {
     '/api': '~/api'
   },
+  server: {
+    host: '0', // default: localhost,
+    port: 3001
+  }
 }
