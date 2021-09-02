@@ -15,6 +15,6 @@ RUN yarn build
 # ONBUILD RUN npm yarn
 # RUN ls -a node_modules/@nuxtjs/style-resources
 ENV HOST 0.0.0.0
-EXPOSE 3000
+EXPOSE 3001
 CMD ["yarn", "start"]
 # CMD ["sh", "-c", "yarn && yarn dev"]

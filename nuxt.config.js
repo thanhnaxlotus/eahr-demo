@@ -42,7 +42,7 @@ export default {
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
-    baseURL: 'http://172.18.0.2:3001', // Used as fallback if no runtime config is provided
+    baseURL: process.env.BASE_URL || '/', // Used as fallback if no runtime config is provided
     credentials: false,
     init(axios) {
       axios.defaults.withCredentials = false
