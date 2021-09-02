@@ -109,7 +109,7 @@ export default {
       }
     },
     upload(){
-      this.$axios.post('/api/upload-complete', {
+      this.$axios.post('/api/upload-complete',{withCredentials: false}, {
         name: this.fileId,
       })
       .then(response => {
