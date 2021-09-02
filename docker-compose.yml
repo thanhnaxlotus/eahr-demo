@@ -1,0 +1,23 @@
+version: '3.9'
+services:
+  node:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    image: anhduc/node:latest
+    restart: always
+    # command: sh -c "cd /app/ && yarn && yarn dev"
+    working_dir: /app
+    environment:
+      - NODE_ENV=production
+    ports:
+      - 3000:3000
+    volumes:
+      - ./api/uploads/:/app/api/uploads/
+    # depends_on:
+    #   database:
+    #     condition: service_healthy
+    networks:
+      - common
+networks:
+  common:
